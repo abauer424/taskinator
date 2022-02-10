@@ -251,6 +251,7 @@ var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
+
 var loadTasks = function() {
   var savedTasks = localStorage.getItem("tasks");
   // if there are no tasks, set tasks to an empty array and return out of the function
@@ -259,6 +260,7 @@ var loadTasks = function() {
   }
   console.log("Saved tasks found!");
   // else, load up saved tasks
+  
 
   // parse into array of objects
   savedTasks = JSON.parse(savedTasks);
@@ -269,6 +271,7 @@ var loadTasks = function() {
     createTaskEl(savedTasks[i]);
   }
 };
+
 
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
